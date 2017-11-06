@@ -1,10 +1,12 @@
+#!/usr/bin/python
+
 import time
 
 import redis
 
 
 def register(filename, client):
-  with open(filename, 'f') as f:
+  with open(filename, 'r') as f:
     return client.register_script(f.read())
 
 
